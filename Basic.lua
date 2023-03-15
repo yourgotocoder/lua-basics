@@ -32,3 +32,29 @@ aBoolValue = false
 
 if not aBoolValue then print('it was false') end
 ans = aBoolValue and 'yes' or 'no' -- This is similar to a ternary expression
+
+sum = 0
+for i = 1, 100 do -- The range includes both end
+ sum = sum + i
+end
+print(sum)
+
+countDownSum = 0
+for j = 100, 1, -1 do countDownSum = countDownSum + j end
+print(countDownSum)
+
+repeat
+  print('the way of the future')
+  num = num - 1
+until num == 0
+
+-- Functions
+function fib(n)
+  if n < 2 then return 1 end
+  return fib(n - 2) + fib(n - 1)
+end
+
+print(fib(10))
+
+
+
