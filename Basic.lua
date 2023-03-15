@@ -31,3 +31,4 @@ foo = anUnkownVariable -- foo will be nil in this case
 aBoolValue = false
 
 if not aBoolValue then print('it was false') end
+ans = aBoolValue and 'yes' or 'no' -- This is similar to a ternary expression
