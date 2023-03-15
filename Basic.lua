@@ -56,5 +56,18 @@ end
 
 print(fib(10))
 
+-- Closures and anonymous functions
+function adder(x)
+  return function (y) return x + y end -- The returned function is created when adder is called, and remembers the value of x:
+end
+
+a1=adder(9)
+print(a1(16))
+
+
+x, y, z = 1, 2, 3, 4 -- 4 is thrown away
+
+
+
 
 
