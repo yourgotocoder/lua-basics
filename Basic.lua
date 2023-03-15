@@ -67,6 +67,13 @@ print(a1(16))
 
 x, y, z = 1, 2, 3, 4 -- 4 is thrown away
 
+-- Functions are first-class and the functions below acts in a similar way
+function f(x) return x * x end
+f = function (x) return x * x end
+
+-- The function below will be a local function, even though it has been declared in the global context
+local function g(x) return math.sin(x) end
+local g = function (x) retrun math.sin(x) end
 
 
 
