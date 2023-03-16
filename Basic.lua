@@ -99,4 +99,36 @@ for key, val in pairs(u) do
   print(key, val)
 end
 
+print(_G['_G'] == _G) -- _G is a special table of all globals
+
+v = {'value1', 'value2', 1.21, 'gigawatts'}
+for i = 1, #v do -- #v is the size of lists for v
+  print(v[i]) -- Indices starts at 1
+end
+-- 3.1 Metatables and metamethods.
+----------------------------------------------------
+
+-- A table can have a metatable that gives the table
+-- operator-overloadish behavior. Later we'll see
+-- how metatables support js-prototype behavior.
+
+f1 = {a = 1, b = 2}  -- Represents the fraction a/b.
+f2 = {a = 2, b = 3}
+
+-- This would fail:
+-- s = f1 + f2
+
+metafraction = {}
+function metafraction.__add(f1, f2)
+  sum = {}
+  sum.b = f1.b * f2.b
+  sum.a = f1.a * f2.b + f2.a * f1.b
+  return sum
+end
+
+setmetatable(f1, metafraction)
+setmetatable(f2, metafraction)
+
+s = f1 + f2  -- call __add(f1, f2) on f1's metatable
+
 
