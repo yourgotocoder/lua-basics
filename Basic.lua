@@ -73,8 +73,12 @@ f = function (x) return x * x end
 
 -- The function below will be a local function, even though it has been declared in the global context
 local function g(x) return math.sin(x) end
-local g = function (x) retrun math.sin(x) end
+local g = function (x) return math.sin(x) end
 
-
+-- Hashtables in Lua --
+table = {key1 = 'value1', key2 = false} -- Dict literals will have string keys by default
+print(table.key1)
+table.newKey = {} -- Adds a new key/value pair
+table.key2 = nil -- Remove key2
 
 
