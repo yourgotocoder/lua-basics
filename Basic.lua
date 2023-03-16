@@ -1,3 +1,4 @@
+-- From https://learnxinyminutes.com/docs/lua/
 -- Two dashes start a one-line comment
 --[[
   Adding to ['s and ]'s makes it a
@@ -130,5 +131,4 @@ setmetatable(f1, metafraction)
 setmetatable(f2, metafraction)
 
 s = f1 + f2  -- call __add(f1, f2) on f1's metatable
-
 
